@@ -1,0 +1,355 @@
+** ComfyUI startup time: 2024-02-04 23:34:51.414328
+** Platform: Darwin
+** Python version: 3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]
+** Python executable: /Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python
+** Log path: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/comfyui.log
+
+Prestartup times for custom nodes:
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/rgthree-comfy
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager
+
+Total VRAM 24576 MB, total RAM 24576 MB
+Set vram state to: SHARED
+Device: mps
+VAE dtype: torch.float32
+Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
+### Loading: ComfyUI-Manager (V1.19.2)
+### ComfyUI Revision: 1878 [6d281b4f] | Released on '2024-01-04'
+FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+Exception in thread Thread-1 (<lambda>):
+Traceback (most recent call last):
+  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 992, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1055, in create_connection
+    raise exceptions[0]
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1040, in create_connection
+[ComfyUI_zfkun] [1;35mcheck start[0m    
+sock = await self._connect_sock(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 954, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/selector_events.py", line 502, in sock_connect
+    return await fut
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/selector_events.py", line 537, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 61] Connect call failed ('0.0.0.0', 443)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 2076, in <lambda>
+    threading.Thread(target=lambda: asyncio.run(default_cache_update())).start()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 641, in run_until_complete
+    return future.result()
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 2074, in default_cache_update
+    await asyncio.gather(a, b, c, d)
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 2062, in get_cache
+    json_obj = await get_data(uri)
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 500, in get_data
+    async with session.get(uri) as resp:
+  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/client.py", line 1194, in __aenter__
+    self._resp = await self._coro
+  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/client.py", line 578, in _request
+    conn = await self._connector.connect(
+  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 911, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1235, in _create_direct_connection
+    raise last_exc
+  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1204, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1000, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host raw.githubusercontent.com:443 ssl:default [Connect call failed ('0.0.0.0', 443)]
+[ComfyUI_zfkun] [93m"Pillow" is not installed. Trying to install.[0m
+[ComfyUI_zfkun] [92m"Pillow" is installed[0m
+[ComfyUI_zfkun] [92mall dependency installed[0m
+[ComfyUI_zfkun] [1;35mcheck end[0m
+[ComfyUI_zfkun] [1;35mboot start[0m
+[ComfyUI_zfkun] [92mnode install: preview_text.js[0m
+[ComfyUI_zfkun] [92mnode install: share_screen.js[0m
+[ComfyUI_zfkun] [92mnode install: preview_text_multiline.js[0m
+[ComfyUI_zfkun] [1;35mboot end[0m
+[34mWAS Node Suite: [0mBlenderNeko's Advanced CLIP Text Encode found, attempting to enable `CLIPTextEncode` support.[0m
+[34mWAS Node Suite: [0m`CLIPTextEncode (BlenderNeko Advanced + NSP)` node enabled under `WAS Suite/Conditioning` menu.[0m
+[34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
+[34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m199[0m [32mnodes successfully.[0m
+
+	[3m[93m"The best way to predict the future is to create it."[0m[3m - Peter Drucker[0m
+
+
+[32m[1m[rgthree] Loaded 21 exciting nodes.[0m
+[32m[rgthree] Optimizing ComfyUI recursive execution. [33mIf queueing and/or re-queueing seems broken, change "patch_recursive_execution" to false in rgthree_config.json [0m
+
+### Loading: ComfyUI-Impact-Pack (V4.73.3)
+### Loading: ComfyUI-Impact-Pack (Subpack: V0.2.4)
+Config Export Error[Errno 2] No such file or directory: 'C:/Users/DorotaL/AppData/Roaming/Blender Foundation/Blender/4.0/scripts/addons/ComfyUI-BlenderAI-node/SDNode/PATH_CFG.json'[Impact Pack] Wildcards loading done.
+### Loading: ComfyUI-Inspire-Pack (V0.63)
+[36;20m[comfyui_controlnet_aux] | INFO -> Using ckpts path: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts[0m
+[36;20m[comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+[36;20m[comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+DWPose: Onnxruntime with acceleration providers detected
+Traceback (most recent call last):
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/nodes.py", line 1810, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfy-qr/__init__.py", line 1, in <module>
+    from .qr_nodes import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfy-qr/qr_nodes.py", line 2, in <module>
+    import qrcode
+ModuleNotFoundError: No module named 'qrcode'
+
+Cannot import /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfy-qr module for custom nodes: No module named 'qrcode'
+Traceback (most recent call last):
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/nodes.py", line 1810, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes/__init__.py", line 57, in <module>
+    from .ScheduledNodes import (
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes/ScheduledNodes.py", line 4, in <module>
+    import numexpr
+ModuleNotFoundError: No module named 'numexpr'
+
+Cannot import /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes module for custom nodes: No module named 'numexpr'
+[34mDavemane42 Custom Nodes: [92mLoaded[0m
+[VideoHelperSuite] - [0;33mWARNING[0m - Failed to import imageio_ffmpeg
+[VideoHelperSuite] - [0;31mERROR[0m - No valid ffmpeg found.
+[36mEfficiency Nodes:[0m Attempting to add Control Net options to the 'HiRes-Fix Script' Node (comfyui_controlnet_aux add-on)...[92mSuccess![0m
+[36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[92mSuccess![0m
+[93mEfficiency Nodes Warning:[0m Failed to import python package 'simpleeval'; related nodes disabled.
+
+------------------------------------------
+[34mComfyroll Studio v1.59 : [92m 154 Nodes Loaded[0m
+------------------------------------------
+** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
+** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
+------------------------------------------
+[agl/register error]: [Errno 17] File exists: '/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/web/extensions/AIGODLIKE-COMFYUI-TRANSLATION'
+[1;35m### [START] ComfyUI AlekPet Nodes ###[0m
+[92mNode -> PainterNode [Loading][0m
+File settings_nodes.json is not found! Create file!
+[92mNode -> PoseNode [Loading][0m
+[92mNode -> ArgosTranslateNode [Loading][0m
+[92mNode -> TranslateNode [Loading][0m
+[AnimateDiffEvo] - [0;33mWARNING[0m - This warning can be ignored, you should not be using the deprecated AnimateDiff Combine node anyway. If you are, use Video Combine from ComfyUI-VideoHelperSuite instead. ffmpeg could not be found. Outputs that require it have been disabled
+[92mNode -> ExtrasNode [Loading][0m
+[1;35m### [END] ComfyUI AlekPet Nodes ###[0m
+[92m[tinyterraNodes] [32mLoaded[0m
+
+Import times for custom nodes:
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sdxl_prompt_styler
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FastVAEDecorder_SDXL
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cg-use-everywhere
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ControlNet-LLLite-ComfyUI
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_LatentToRGB
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_TiledKSampler
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/AIGODLIKE-COMFYUI-TRANSLATION
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/IPAdapter-ComfyUI
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Dave_CustomNode
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sd-dynamic-thresholding
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cup.py
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_experiments
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cg-image-picker
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_dagthomas
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_fabric
+   0.0 seconds (IMPORT FAILED): /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfy-qr
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Noise
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/Cup-ClipBoard
+   0.0 seconds (IMPORT FAILED): /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyMath
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-post-processing-nodes
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-portrait-master
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Cutoff
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Advanced-ControlNet
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/efficiency-nodes-comfyui
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/rgthree-comfy
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_tinyterraNodes
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-WD14-Tagger
+   0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager
+   0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-dynamicprompts
+   0.2 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-NegiTools
+   0.3 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux
+   0.6 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
+   0.7 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui
+   1.1 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_segment_anything
+   1.3 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_zfkun
+   2.2 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Custom_Nodes_AlekPet
+   2.6 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/clipseg.py
+
+Starting server
+
+To see the GUI go to: http://127.0.0.1:8188
+Exception in thread Thread-4 (diff_listen_loop):
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cup.py", line 164, in diff_listen_loop
+    update_cached_nodes()
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cup.py", line 157, in update_cached_nodes
+    with HOST_PATH.joinpath("diff_object_info.json").open("w+") as fp:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py", line 1117, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/DorotaL/AppData/Roaming/Blender Foundation/Blender/4.0/scripts/addons/ComfyUI-BlenderAI-node/SDNode/diff_object_info.json'
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/4245046894_model-list.json
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/2259715867_alter-list.json
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_experiments[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Impact-Pack[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Cutoff[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Noise[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Dave_CustomNode[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-WD14-Tagger[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-dynamicprompts[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_fabric[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sd-dynamic-thresholdingFETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/2259715867_alter-list.json
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_experiments[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Impact-Pack[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Cutoff[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Noise[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Dave_CustomNode[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-WD14-Tagger[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-dynamicprompts[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_fabric[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sd-dynamic-thresholdingFETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'ComfyUI-Manager'
+Update: ['https://github.com/ltdrdata/ComfyUI-Manager']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager / repo.is_dirty: True
+
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
+[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
+Update was successful.
+After restarting ComfyUI, please refresh the browser.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'ComfyUI's ControlNet Auxiliary Preprocessors'
+Update: ['https://github.com/Fannovel16/comfyui_controlnet_aux']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux / repo.is_dirty: True
+
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
+[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
+Update was successful.
+After restarting ComfyUI, please refresh the browser.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'WAS Node Suite'
+Update: ['https://github.com/WASasquatch/was-node-suite-comfyui']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui / repo.is_dirty: True
+
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
+[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
+Update was successful.
+After restarting ComfyUI, please refresh the browser.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'pythongosssss/ComfyUI-Custom-Scripts'
+Update: ['https://github.com/pythongosssss/ComfyUI-Custom-Scripts']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts / repo.is_dirty: True
+
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
+[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
+Update was successful.
+After restarting ComfyUI, please refresh the browser.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'ComfyUI_Comfyroll_CustomNodes'
+Update: ['https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes / repo.is_dirty: True
+
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
+[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
+Update was successful.
+After restarting ComfyUI, please refresh the browser.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'ComfyUI_IPAdapter_plus'
+Update: ['https://github.com/cubiq/ComfyUI_IPAdapter_plus']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus / repo.is_dirty: True
+
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
+[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
+Update was successful.
+After restarting ComfyUI, please refresh the browser.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'SDXL Prompt Styler'
+Update: ['https://github.com/twri/sdxl_prompt_styler']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sdxl_prompt_styler / repo.is_dirty: True
+
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
+[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
+Update was successful.
+After restarting ComfyUI, please refresh the browser.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'AnimateDiff Evolved'
+Update: ['https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved / repo.is_dirty: True
+
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
+[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
+Update was successful.
+After restarting ComfyUI, please refresh the browser.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'segment anything'
+Update: ['https://github.com/storyicon/comfyui_segment_anything']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_segment_anything / repo.is_dirty: True
+
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
+[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
+Update was successful.
+After restarting ComfyUI, please refresh the browser.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'rgthree's ComfyUI Nodes'
+Update: ['https://github.com/rgthree/rgthree-comfy']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/rgthree-comfy / repo.is_dirty: True
+
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
+[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
+Update was successful.
+After restarting ComfyUI, please refresh the browser.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'ComfyUI-VideoHelperSuite'
+Update: ['https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite / repo.is_dirty: True
+Update(git-clone) error: https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite / Cmd('git') failed due to: exit code(1)
+  cmdline: git pull -v -- origin
+  stderr: 'error: The following untracked working tree files would be overwritten by merge:'
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+Update custom node 'ComfyUI-Advanced-ControlNet'
+Update: ['https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet']
+path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Advanced-ControlNet / repo.is_dirty: True
+Update(git-clone) error: https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet / Cmd('git') failed due to: exit code(1)
+  cmdline: git pull -v -- origin
+  stderr: 'error: RPC failed; curl 28 Failed to connect to github.com port 443 after 75000 ms: Couldn't connect to server
+fatal: expected flush after ref listing'
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+Start update check...[2KUpdate check done.
+FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
