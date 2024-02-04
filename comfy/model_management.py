@@ -175,7 +175,7 @@ try:
         if int(torch_version[0]) >= 2:
             if ENABLE_PYTORCH_ATTENTION == False and args.use_split_cross_attention == False and args.use_quad_cross_attention == False:
                 ENABLE_PYTORCH_ATTENTION = True
-            if torch.cuda.is_bf16_supported():
+            if torch.cuda.is_bf16_supported() and torch.cuda.get_device_properties(torch.cuda.current_device()).major >= 8:
                 VAE_DTYPE = torch.bfloat16
     if is_intel_xpu():
         if args.use_split_cross_attention == False and args.use_quad_cross_attention == False:
@@ -546,10 +546,8 @@ def text_encoder_dtype(device=None):
     if is_device_cpu(device):
         return torch.float16
 
-    if should_use_fp16(device, prioritize_performance=False):
-        return torch.float16
-    else:
-        return torch.float32
+    return torch.float16
+
 
 def intermediate_device():
     if args.gpu_only:

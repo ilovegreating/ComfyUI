@@ -1,118 +1,116 @@
-** ComfyUI startup time: 2024-02-04 23:34:51.414328
-** Platform: Darwin
-** Python version: 3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]
-** Python executable: /Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python
-** Log path: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/comfyui.log
-
+** ComfyUI startup time: 2024-02-05 05:18:33.786645
+[2024-02-05 05:18] ** Platform: Darwin
+[2024-02-05 05:18] ** Python version: 3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]
+[2024-02-05 05:18] ** Python executable: /Library/Frameworks/Python.framework/Versions/3.10/bin/python3
+[2024-02-05 05:18] ** Log path: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/comfyui.log
+[2024-02-05 05:18] 
 Prestartup times for custom nodes:
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/rgthree-comfy
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager
-
-Total VRAM 24576 MB, total RAM 24576 MB
-Set vram state to: SHARED
-Device: mps
-VAE dtype: torch.float32
-Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
-### Loading: ComfyUI-Manager (V1.19.2)
-### ComfyUI Revision: 1878 [6d281b4f] | Released on '2024-01-04'
-FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
-FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
-FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
-FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
-Exception in thread Thread-1 (<lambda>):
-Traceback (most recent call last):
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 992, in _wrap_create_connection
-    return await self._loop.create_connection(*args, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1055, in create_connection
-    raise exceptions[0]
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1040, in create_connection
-[ComfyUI_zfkun] [1;35mcheck start[0m    
-sock = await self._connect_sock(
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 954, in _connect_sock
-    await self.sock_connect(sock, address)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/selector_events.py", line 502, in sock_connect
-    return await fut
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/selector_events.py", line 537, in _sock_connect_cb
-    raise OSError(err, f'Connect call failed {address}')
-ConnectionRefusedError: [Errno 61] Connect call failed ('0.0.0.0', 443)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
-    self.run()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 946, in run
-    self._target(*self._args, **self._kwargs)
-  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 2076, in <lambda>
-    threading.Thread(target=lambda: asyncio.run(default_cache_update())).start()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
-    return loop.run_until_complete(main)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 641, in run_until_complete
-    return future.result()
-  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 2074, in default_cache_update
-    await asyncio.gather(a, b, c, d)
-  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 2062, in get_cache
-    json_obj = await get_data(uri)
-  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 500, in get_data
-    async with session.get(uri) as resp:
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/client.py", line 1194, in __aenter__
-    self._resp = await self._coro
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/client.py", line 578, in _request
-    conn = await self._connector.connect(
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 544, in connect
-    proto = await self._create_connection(req, traces, timeout)
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 911, in _create_connection
-    _, proto = await self._create_direct_connection(req, traces, timeout)
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1235, in _create_direct_connection
-    raise last_exc
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1204, in _create_direct_connection
-    transp, proto = await self._wrap_create_connection(
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1000, in _wrap_create_connection
-    raise client_error(req.connection_key, exc) from exc
-aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host raw.githubusercontent.com:443 ssl:default [Connect call failed ('0.0.0.0', 443)]
-[ComfyUI_zfkun] [93m"Pillow" is not installed. Trying to install.[0m
-[ComfyUI_zfkun] [92m"Pillow" is installed[0m
-[ComfyUI_zfkun] [92mall dependency installed[0m
-[ComfyUI_zfkun] [1;35mcheck end[0m
-[ComfyUI_zfkun] [1;35mboot start[0m
-[ComfyUI_zfkun] [92mnode install: preview_text.js[0m
-[ComfyUI_zfkun] [92mnode install: share_screen.js[0m
-[ComfyUI_zfkun] [92mnode install: preview_text_multiline.js[0m
-[ComfyUI_zfkun] [1;35mboot end[0m
-[34mWAS Node Suite: [0mBlenderNeko's Advanced CLIP Text Encode found, attempting to enable `CLIPTextEncode` support.[0m
-[34mWAS Node Suite: [0m`CLIPTextEncode (BlenderNeko Advanced + NSP)` node enabled under `WAS Suite/Conditioning` menu.[0m
-[34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
-[34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
-[34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m199[0m [32mnodes successfully.[0m
-
-	[3m[93m"The best way to predict the future is to create it."[0m[3m - Peter Drucker[0m
-
-
-[32m[1m[rgthree] Loaded 21 exciting nodes.[0m
-[32m[rgthree] Optimizing ComfyUI recursive execution. [33mIf queueing and/or re-queueing seems broken, change "patch_recursive_execution" to false in rgthree_config.json [0m
-
-### Loading: ComfyUI-Impact-Pack (V4.73.3)
-### Loading: ComfyUI-Impact-Pack (Subpack: V0.2.4)
-Config Export Error[Errno 2] No such file or directory: 'C:/Users/DorotaL/AppData/Roaming/Blender Foundation/Blender/4.0/scripts/addons/ComfyUI-BlenderAI-node/SDNode/PATH_CFG.json'[Impact Pack] Wildcards loading done.
-### Loading: ComfyUI-Inspire-Pack (V0.63)
-[36;20m[comfyui_controlnet_aux] | INFO -> Using ckpts path: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts[0m
-[36;20m[comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
-[36;20m[comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
-DWPose: Onnxruntime with acceleration providers detected
-Traceback (most recent call last):
-  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/nodes.py", line 1810, in load_custom_node
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/rgthree-comfy
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager
+[2024-02-05 05:18] 
+[2024-02-05 05:18] Total VRAM 24576 MB, total RAM 24576 MB
+[2024-02-05 05:18] Set vram state to: SHARED
+[2024-02-05 05:18] Device: mps
+[2024-02-05 05:18] VAE dtype: torch.float32
+[2024-02-05 05:18] Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
+[2024-02-05 05:18] __name__ : ComfyUI_node_Lilly
+[2024-02-05 05:18] __file__ : /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_node_Lilly/__init__.py
+[2024-02-05 05:18] os.path.basename(__file__) : __init__.py
+[2024-02-05 05:18] os.path.splitext(os.path.basename(__file__))[0] : __init__
+[2024-02-05 05:18] working directory :  /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI
+[2024-02-05 05:18] ──────────────────────────────────────────────  init start  ──────────────────────────────────────────────
+[2024-02-05 05:18] __name__ : custom_nodes.ComfyUI_node_Lilly
+[2024-02-05 05:18] __file__ : /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_node_Lilly/__init__.py
+[2024-02-05 05:18] os.path.basename(__file__) : __init__.py
+[2024-02-05 05:18] os.path.splitext(os.path.basename(__file__))[0] : __init__
+[2024-02-05 05:18] working directory :  /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI
+[2024-02-05 05:18] [05:18:35] Load ok   : CheckpointLoaderRandom                                               __init__.py:83
+[2024-02-05 05:18]            Load ok   : CheckpointLoaderSimpleText                                           __init__.py:83
+[2024-02-05 05:18] [05:18:35] wildcards card_path :  /Users/aoneko/Documents/Stable                           wildcards.py:36
+           Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_node_Lilly/../../wildcar                
+           ds/**/*.txt                                                                                    
+[2024-02-05 05:18]            cards file count :  0                                                          wildcards.py:187
+[2024-02-05 05:18]            wildcards test : aest                                                          wildcards.py:218
+[2024-02-05 05:18]            wildcards test : *test                                                         wildcards.py:219
+[2024-02-05 05:18]            wildcards test : ?est                                                          wildcards.py:220
+[2024-02-05 05:18]            wildcards test : test                                                          wildcards.py:221
+[2024-02-05 05:18]            wildcards test : /test                                                         wildcards.py:222
+[2024-02-05 05:18]            wildcards test : /0/test                                                       wildcards.py:223
+[2024-02-05 05:18]            Load ok   : CLIPTextEncodeWildcards                                              __init__.py:83
+[2024-02-05 05:18]            Load ok   : LoraLoaderText                                                       __init__.py:83
+[2024-02-05 05:18]            Load ok   : LoraLoaderTextRandom                                                 __init__.py:83
+[2024-02-05 05:18]            Load ok   : Random_Sampler                                                       __init__.py:83
+[2024-02-05 05:18]            Load ok   : VAELoaderDecode                                                      __init__.py:83
+[2024-02-05 05:18]            Load ok   : VAELoaderText                                                        __init__.py:83
+[2024-02-05 05:18] Total VRAM 24576 MB, total RAM 24576 MB
+[2024-02-05 05:18] Set vram state to: SHARED
+[2024-02-05 05:18] Device: mps
+[2024-02-05 05:18] VAE dtype: torch.float32
+[2024-02-05 05:18]            Load ok   : SimpleSampler                                                        __init__.py:83
+[2024-02-05 05:18]            Load ok   : SaveImageSimple                                                      __init__.py:83
+[2024-02-05 05:18]            Load ok   : TextWildcards                                                        __init__.py:83
+[2024-02-05 05:18] ───────────────────────────────────────────────  init end  ───────────────────────────────────────────────
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/torchvision/datapoints/__init__.py:12: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+[2024-02-05 05:18] /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/torchvision/transforms/v2/__init__.py:54: UserWarning: The torchvision.datapoints and torchvision.transforms.v2 namespaces are still Beta. While we do not expect major breaking changes, some APIs may still change according to user feedback. Please submit any feedback you may have in this issue: https://github.com/pytorch/vision/issues/6753, and you can also check out https://github.com/pytorch/vision/issues/7319 to learn more about the APIs that we suspect might involve future changes. You can silence this warning by calling torchvision.disable_beta_transforms_warning().
+  warnings.warn(_BETA_TRANSFORMS_WARNING)
+[2024-02-05 05:18] ### Loading: ComfyUI-Manager (V2.7)
+[2024-02-05 05:18] ### ComfyUI Revision: 1879 on 'test' [7266544d] | Released on '2024-02-05'
+[2024-02-05 05:18] [0;33m[ReActor][0m - [38;5;173mSTATUS[0m - [0;32mRunning v0.4.1-b8 in ComfyUI[0m
+[2024-02-05 05:18] Torch version: 2.0.1
+[2024-02-05 05:18] [INFO] PromptControl: Use STYLE:weight_interpretation:normalization at the start of a prompt to use advanced encodings
+[2024-02-05 05:18] [INFO] PromptControl: Weight interpretations available: comfy,A1111,compel,comfy++,down_weight,perp
+[2024-02-05 05:18] [INFO] PromptControl: Normalization types available: none,mean,length,length+mean
+[2024-02-05 05:18] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-02-05 05:18] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-02-05 05:18] 2024-02-05 05:18:39,145 - roop - [0;32mINFO[0m - roop v0.0.2
+[2024-02-05 05:18] Traceback (most recent call last):
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/nodes.py", line 1893, in load_custom_node
     module_spec.loader.exec_module(module)
   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfy-qr/__init__.py", line 1, in <module>
-    from .qr_nodes import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
-  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfy-qr/qr_nodes.py", line 2, in <module>
-    import qrcode
-ModuleNotFoundError: No module named 'qrcode'
-
-Cannot import /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfy-qr module for custom nodes: No module named 'qrcode'
-Traceback (most recent call last):
-  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/nodes.py", line 1810, in load_custom_node
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-ExLlama/__init__.py", line 1, in <module>
+    from . import exllama, text
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-ExLlama/exllama.py", line 9, in <module>
+    from exllamav2 import (
+ModuleNotFoundError: No module named 'exllamav2'
+[2024-02-05 05:18] 
+[2024-02-05 05:18] Cannot import /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-ExLlama module for custom nodes: No module named 'exllamav2'
+[2024-02-05 05:18] [ComfyUI_zfkun] [1;35mcheck start[0m
+[2024-02-05 05:18] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-02-05 05:18] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-02-05 05:18] [ComfyUI_zfkun] [93m"Pillow" is not installed. Trying to install.[0m
+[2024-02-05 05:18] [ComfyUI_zfkun] [92m"Pillow" is installed[0m
+[2024-02-05 05:18] [ComfyUI_zfkun] [92mall dependency installed[0m
+[2024-02-05 05:18] [ComfyUI_zfkun] [1;35mcheck end[0m
+[2024-02-05 05:18] [ComfyUI_zfkun] [1;35mboot start[0m
+[2024-02-05 05:18] [ComfyUI_zfkun] [92mnode install: preview_text.js[0m
+[2024-02-05 05:18] [ComfyUI_zfkun] [92mnode install: share_screen.js[0m
+[2024-02-05 05:18] [ComfyUI_zfkun] [92mnode install: preview_text_multiline.js[0m
+[2024-02-05 05:18] [ComfyUI_zfkun] [1;35mboot end[0m
+[2024-02-05 05:18] [34mWAS Node Suite: [0mBlenderNeko's Advanced CLIP Text Encode found, attempting to enable `CLIPTextEncode` support.[0m
+[2024-02-05 05:18] [34mWAS Node Suite: [0m`CLIPTextEncode (BlenderNeko Advanced + NSP)` node enabled under `WAS Suite/Conditioning` menu.[0m
+[2024-02-05 05:18] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[2024-02-05 05:18] [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
+[2024-02-05 05:18] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
+[2024-02-05 05:18] 
+	[3m[93m"Everything you've ever wanted is on the other side of fear."[0m[3m - George Addair[0m
+[2024-02-05 05:18] 
+[2024-02-05 05:18] 
+[2024-02-05 05:18] [92m[rgthree] Loaded 33 fantastic nodes.[0m
+[2024-02-05 05:18] [92m[rgthree] Will use rgthree's optimized recursive execution.[0m
+[2024-02-05 05:18] 
+[2024-02-05 05:18] ### Loading: ComfyUI-Impact-Pack (V4.73.3)
+[2024-02-05 05:18] ### Loading: ComfyUI-Impact-Pack (Subpack: V0.2.4)
+[2024-02-05 05:18] Config Export Error[Errno 2] No such file or directory: 'C:/Users/DorotaL/AppData/Roaming/Blender Foundation/Blender/4.0/scripts/addons/ComfyUI-BlenderAI-node/SDNode/PATH_CFG.json'[Impact Pack] Wildcards loading done.
+[2024-02-05 05:18] ### Loading: ComfyUI-Inspire-Pack (V0.63)
+[2024-02-05 05:18] [36;20m[comfyui_controlnet_aux] | INFO -> Using ckpts path: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts[0m
+[2024-02-05 05:18] [36;20m[comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+[2024-02-05 05:18] [36;20m[comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+[2024-02-05 05:18] DWPose: Onnxruntime with acceleration providers detected
+[2024-02-05 05:18] [AnimateDiffEvo] - [0;31mERROR[0m - No motion models found. Please download one and place in: ['/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved/models', '/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/models/animatediff_models']
+[2024-02-05 05:18] Traceback (most recent call last):
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/nodes.py", line 1893, in load_custom_node
     module_spec.loader.exec_module(module)
   File "<frozen importlib._bootstrap_external>", line 883, in exec_module
   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
@@ -121,235 +119,1222 @@ Traceback (most recent call last):
   File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes/ScheduledNodes.py", line 4, in <module>
     import numexpr
 ModuleNotFoundError: No module named 'numexpr'
-
-Cannot import /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes module for custom nodes: No module named 'numexpr'
-[34mDavemane42 Custom Nodes: [92mLoaded[0m
-[VideoHelperSuite] - [0;33mWARNING[0m - Failed to import imageio_ffmpeg
-[VideoHelperSuite] - [0;31mERROR[0m - No valid ffmpeg found.
-[36mEfficiency Nodes:[0m Attempting to add Control Net options to the 'HiRes-Fix Script' Node (comfyui_controlnet_aux add-on)...[92mSuccess![0m
-[36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[92mSuccess![0m
-[93mEfficiency Nodes Warning:[0m Failed to import python package 'simpleeval'; related nodes disabled.
-
-------------------------------------------
-[34mComfyroll Studio v1.59 : [92m 154 Nodes Loaded[0m
-------------------------------------------
-** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
-** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
-------------------------------------------
-[agl/register error]: [Errno 17] File exists: '/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/web/extensions/AIGODLIKE-COMFYUI-TRANSLATION'
-[1;35m### [START] ComfyUI AlekPet Nodes ###[0m
-[92mNode -> PainterNode [Loading][0m
-File settings_nodes.json is not found! Create file!
-[92mNode -> PoseNode [Loading][0m
-[92mNode -> ArgosTranslateNode [Loading][0m
-[92mNode -> TranslateNode [Loading][0m
-[AnimateDiffEvo] - [0;33mWARNING[0m - This warning can be ignored, you should not be using the deprecated AnimateDiff Combine node anyway. If you are, use Video Combine from ComfyUI-VideoHelperSuite instead. ffmpeg could not be found. Outputs that require it have been disabled
-[92mNode -> ExtrasNode [Loading][0m
-[1;35m### [END] ComfyUI AlekPet Nodes ###[0m
-[92m[tinyterraNodes] [32mLoaded[0m
-
+[2024-02-05 05:18] 
+[2024-02-05 05:18] Cannot import /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes module for custom nodes: No module named 'numexpr'
+[2024-02-05 05:18] Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
+[2024-02-05 05:18] [34mDavemane42 Custom Nodes: [92mLoaded[0m
+[2024-02-05 05:18] [VideoHelperSuite] - [0;33mWARNING[0m - Failed to import imageio_ffmpeg
+[2024-02-05 05:18] [VideoHelperSuite] - [0;31mERROR[0m - No valid ffmpeg found.
+[2024-02-05 05:18] [36mEfficiency Nodes:[0m Attempting to add Control Net options to the 'HiRes-Fix Script' Node (comfyui_controlnet_aux add-on)...[92mSuccess![0m
+[2024-02-05 05:18] [36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[91mFailed![0m
+[2024-02-05 05:18] [93mEfficiency Nodes Warning:[0m Failed to import python package 'simpleeval'; related nodes disabled.
+[2024-02-05 05:18] 
+[2024-02-05 05:18] ------------------------------------------
+[2024-02-05 05:18] [34mComfyroll Studio v1.76 : [92m 175 Nodes Loaded[0m
+[2024-02-05 05:18] ------------------------------------------
+[2024-02-05 05:18] ** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
+[2024-02-05 05:18] ** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
+[2024-02-05 05:18] ------------------------------------------
+[2024-02-05 05:18] [agl/register error]: [Errno 17] File exists: '/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/web/extensions/AIGODLIKE-COMFYUI-TRANSLATION'
+[2024-02-05 05:18] Traceback (most recent call last):
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/nodes.py", line 1893, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-NegiTools/__init__.py", line 1, in <module>
+    from .negi.openai_dalle3 import OpenAiDalle3
+  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-NegiTools/negi/openai_dalle3.py", line 1, in <module>
+    import openai
+ModuleNotFoundError: No module named 'openai'
+[2024-02-05 05:18] 
+[2024-02-05 05:18] Cannot import /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-NegiTools module for custom nodes: No module named 'openai'
+[2024-02-05 05:18] [1;35m### [START] ComfyUI AlekPet Nodes ###[0m
+[2024-02-05 05:18] [92mNode -> PainterNode [Loading][0m
+[2024-02-05 05:18] [92mNode -> PoseNode [Loading][0m
+[2024-02-05 05:18] [92mNode -> ArgosTranslateNode [Loading][0m
+[2024-02-05 05:18] [92mNode -> TranslateNode [Loading][0m
+[2024-02-05 05:18] [92mNode -> ExtrasNode [Loading][0m
+[2024-02-05 05:18] [1;35m### [END] ComfyUI AlekPet Nodes ###[0m
+[2024-02-05 05:18] [36;20m[comfy_mtb] | INFO -> loaded [96m65[0m nodes successfuly[0m
+[2024-02-05 05:18] [92m[tinyterraNodes] [32mLoaded[0m
+[2024-02-05 05:18] 
 Import times for custom nodes:
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sdxl_prompt_styler
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FastVAEDecorder_SDXL
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cg-use-everywhere
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ControlNet-LLLite-ComfyUI
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_LatentToRGB
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_TiledKSampler
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/AIGODLIKE-COMFYUI-TRANSLATION
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/IPAdapter-ComfyUI
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Dave_CustomNode
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sd-dynamic-thresholding
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cup.py
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_experiments
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cg-image-picker
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_dagthomas
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_fabric
-   0.0 seconds (IMPORT FAILED): /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfy-qr
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Noise
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/Cup-ClipBoard
-   0.0 seconds (IMPORT FAILED): /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyMath
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-post-processing-nodes
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-portrait-master
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Cutoff
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Advanced-ControlNet
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/efficiency-nodes-comfyui
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/rgthree-comfy
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_tinyterraNodes
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-WD14-Tagger
-   0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager
-   0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-dynamicprompts
-   0.2 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-NegiTools
-   0.3 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux
-   0.6 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
-   0.7 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui
-   1.1 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_segment_anything
-   1.3 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_zfkun
-   2.2 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Custom_Nodes_AlekPet
-   2.6 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/clipseg.py
-
-Starting server
-
-To see the GUI go to: http://127.0.0.1:8188
-Exception in thread Thread-4 (diff_listen_loop):
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
-    self.run()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 946, in run
-    self._target(*self._args, **self._kwargs)
-  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cup.py", line 164, in diff_listen_loop
-    update_cached_nodes()
-  File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cup.py", line 157, in update_cached_nodes
-    with HOST_PATH.joinpath("diff_object_info.json").open("w+") as fp:
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py", line 1117, in open
-    return self._accessor.open(self, mode, buffering, encoding, errors,
-FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/DorotaL/AppData/Roaming/Blender Foundation/Blender/4.0/scripts/addons/ComfyUI-BlenderAI-node/SDNode/diff_object_info.json'
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/4245046894_model-list.json
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/2259715867_alter-list.json
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_experiments[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Impact-Pack[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Cutoff[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Noise[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Dave_CustomNode[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-WD14-Tagger[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-dynamicprompts[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_fabric[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sd-dynamic-thresholdingFETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/2259715867_alter-list.json
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_experiments[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Impact-Pack[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Cutoff[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Noise[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Dave_CustomNode[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-WD14-Tagger[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-dynamicprompts[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_fabric[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sd-dynamic-thresholdingFETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'ComfyUI-Manager'
-Update: ['https://github.com/ltdrdata/ComfyUI-Manager']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager / repo.is_dirty: True
-
-## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
-[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
-Update was successful.
-After restarting ComfyUI, please refresh the browser.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'ComfyUI's ControlNet Auxiliary Preprocessors'
-Update: ['https://github.com/Fannovel16/comfyui_controlnet_aux']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux / repo.is_dirty: True
-
-## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
-[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
-Update was successful.
-After restarting ComfyUI, please refresh the browser.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'WAS Node Suite'
-Update: ['https://github.com/WASasquatch/was-node-suite-comfyui']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui / repo.is_dirty: True
-
-## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
-[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
-Update was successful.
-After restarting ComfyUI, please refresh the browser.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'pythongosssss/ComfyUI-Custom-Scripts'
-Update: ['https://github.com/pythongosssss/ComfyUI-Custom-Scripts']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts / repo.is_dirty: True
-
-## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
-[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
-Update was successful.
-After restarting ComfyUI, please refresh the browser.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'ComfyUI_Comfyroll_CustomNodes'
-Update: ['https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes / repo.is_dirty: True
-
-## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
-[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
-Update was successful.
-After restarting ComfyUI, please refresh the browser.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'ComfyUI_IPAdapter_plus'
-Update: ['https://github.com/cubiq/ComfyUI_IPAdapter_plus']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus / repo.is_dirty: True
-
-## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
-[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
-Update was successful.
-After restarting ComfyUI, please refresh the browser.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'SDXL Prompt Styler'
-Update: ['https://github.com/twri/sdxl_prompt_styler']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sdxl_prompt_styler / repo.is_dirty: True
-
-## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
-[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
-Update was successful.
-After restarting ComfyUI, please refresh the browser.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'AnimateDiff Evolved'
-Update: ['https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved / repo.is_dirty: True
-
-## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
-[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
-Update was successful.
-After restarting ComfyUI, please refresh the browser.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'segment anything'
-Update: ['https://github.com/storyicon/comfyui_segment_anything']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_segment_anything / repo.is_dirty: True
-
-## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
-[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
-Update was successful.
-After restarting ComfyUI, please refresh the browser.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'rgthree's ComfyUI Nodes'
-Update: ['https://github.com/rgthree/rgthree-comfy']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/rgthree-comfy / repo.is_dirty: True
-
-## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']
-[ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python']`
-Update was successful.
-After restarting ComfyUI, please refresh the browser.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'ComfyUI-VideoHelperSuite'
-Update: ['https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite / repo.is_dirty: True
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-CADS
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-seamless-tiling
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sdxl_prompt_styler
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_LatentToRGB
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/attention-couple-ComfyUI
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ControlNet-LLLite-ComfyUI
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-optical-flow
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-LaMA-Preprocessor
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/masquerade-nodes-comfyui
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cd-tuner_negpip-ComfyUI
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-diffusion-cg
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cg-use-everywhere
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_experiments
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/AIGODLIKE-COMFYUI-TRANSLATION
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FastVAEDecorder_SDXL
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_TiledKSampler
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sd-dynamic-thresholding
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cup.py
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/IPAdapter-ComfyUI
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ambw_comfyui
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Cutoff
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_fabric
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Noise
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cg-image-picker
+[2024-02-05 05:18]    0.0 seconds (IMPORT FAILED): /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-NegiTools
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_SeeCoder
+[2024-02-05 05:18]    0.0 seconds (IMPORT FAILED): /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-ExLlama
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-portrait-master
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/Cup-ClipBoard
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Dave_CustomNode
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-post-processing-nodes
+[2024-02-05 05:18]    0.0 seconds (IMPORT FAILED): /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyMath
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-WD14-Tagger
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/images-grid-comfy-plugin
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_dagthomas
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Advanced-ControlNet
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/efficiency-nodes-comfyui
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfy-qr
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/rgthree-comfy
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-TiledDiffusion
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_tinyterraNodes
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sd-webui-color-enhance
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-dynamicprompts
+[2024-02-05 05:18]    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/nui-suite
+[2024-02-05 05:18]    0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager
+[2024-02-05 05:18]    0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/clipseg.py
+[2024-02-05 05:18]    0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_smZNodes
+[2024-02-05 05:18]    0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-prompt-control
+[2024-02-05 05:18]    0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_node_Lilly
+[2024-02-05 05:18]    0.2 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_roop
+[2024-02-05 05:18]    0.2 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/Comfyui_Lama
+[2024-02-05 05:18]    0.2 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
+[2024-02-05 05:18]    0.3 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux
+[2024-02-05 05:18]    0.4 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfy_mtb
+[2024-02-05 05:18]    0.5 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-reactor-node
+[2024-02-05 05:18]    0.6 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui
+[2024-02-05 05:18]    1.2 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/abg-comfyui
+[2024-02-05 05:18]    1.2 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_segment_anything
+[2024-02-05 05:18]    1.3 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_zfkun
+[2024-02-05 05:18]    2.3 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Custom_Nodes_AlekPet
+[2024-02-05 05:18]    2.9 seconds: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/image_control
+[2024-02-05 05:18] 
+[2024-02-05 05:18] Exception in thread Thread-8 (prompt_worker):
+[2024-02-05 05:18] Traceback (most recent call last):
+[2024-02-05 05:18]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+[2024-02-05 05:18]     [2024-02-05 05:18] Starting server
+self.run()
+[2024-02-05 05:18]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 946, in run
+[2024-02-05 05:18] 
+[2024-02-05 05:18] To see the GUI go to: http://127.0.0.1:8188
+[2024-02-05 05:18]     self._target(*self._args, **self._kwargs)
+[2024-02-05 05:18]   File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/main.py", line 94, in prompt_worker
+[2024-02-05 05:18]     e = execution.PromptExecutor(server)
+[2024-02-05 05:18]   File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/execution.py", line 270, in __init__
+[2024-02-05 05:18]     self.reset()
+[2024-02-05 05:18]   File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/execution.py", line 279, in reset
+[2024-02-05 05:18]     self.server = server
+[2024-02-05 05:18] NameError: name 'server' is not defined
+[2024-02-05 05:18] Exception in thread Thread-3 (diff_listen_loop):
+[2024-02-05 05:18] Traceback (most recent call last):
+[2024-02-05 05:18]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
+[2024-02-05 05:18]     self.run()
+[2024-02-05 05:18]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 946, in run
+[2024-02-05 05:18]     self._target(*self._args, **self._kwargs)
+[2024-02-05 05:18]   File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cup.py", line 164, in diff_listen_loop
+[2024-02-05 05:18]     update_cached_nodes()
+[2024-02-05 05:18]   File "/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cup.py", line 157, in update_cached_nodes
+[2024-02-05 05:18]     with HOST_PATH.joinpath("diff_object_info.json").open("w+") as fp:
+[2024-02-05 05:18]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py", line 1117, in open
+[2024-02-05 05:18]     return self._accessor.open(self, mode, buffering, encoding, errors,
+[2024-02-05 05:18] FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/DorotaL/AppData/Roaming/Blender Foundation/Blender/4.0/scripts/addons/ComfyUI-BlenderAI-node/SDNode/diff_object_info.json'
+[2024-02-05 05:19] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/4245046894_model-list.json
+[2024-02-05 05:19] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:19] Start update check...[2KUpdate check done.
+[2024-02-05 05:19] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:19] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:20] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:20] Start update check...[2KUpdate check done.
+[2024-02-05 05:20] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:20] Install custom node 'ComfyUI-ExLlama'
+[2024-02-05 05:20] Try fixing: ['https://github.com/Zuellni/ComfyUI-ExLlama']
+[2024-02-05 05:20] Install: pip packages
+[2024-02-05 05:20] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', 'exllamav2; platform_system == "Linux"']
+[2024-02-05 05:20]  Ignoring exllamav2: markers 'platform_system == "Linux"' don't match your environment
+[2024-02-05 05:20] [2024-02-05 05:20] [!] --- Logging error ---
+[2024-02-05 05:20] [!] Traceback (most recent call last):
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:20] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:20] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:20] [!]     for render_output in iter_render:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:20] [!]     for line in lines:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:20] [!]     for segment in segments:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:20] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:20] [!]     renderable = cast_method()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:20] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:20] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:20] [!]     s2 = os.stat(f2)
+[2024-02-05 05:20] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:20] [!] Call stack:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:20] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:20] [!]     exec(code, run_globals)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:20] [!]     sys.exit(_main())
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:20] [!]     return command.main(cmd_args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:20] [!]     return self._main(args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:20] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:20] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:20] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:20] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:20] [!]     self.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:20] [!]     self.callHandlers(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:20] [!]     hdlr.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:20] [!]     self.emit(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:20] [!]     self.handleError(record)
+[2024-02-05 05:20] [!] Message: '[present-rich] %s'
+[2024-02-05 05:20] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:20] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', 'https://github.com/turboderp/exllamav2/releases/download/v0.0.12/exllamav2-0.0.12+cu121-cp311-cp311-win_amd64.whl; platform_system == "Windows"']
+[2024-02-05 05:20]  Ignoring exllamav2: markers 'platform_system == "Windows"' don't match your environment
+[2024-02-05 05:20] [!] --- Logging error ---
+[2024-02-05 05:20] [!] Traceback (most recent call last):
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:20] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:20] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:20] [!]     for render_output in iter_render:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:20] [!]     for line in lines:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:20] [!]     for segment in segments:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:20] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:20] [!]     renderable = cast_method()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:20] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:20] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:20] [!]     s2 = os.stat(f2)
+[2024-02-05 05:20] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:20] [!] Call stack:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:20] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:20] [!]     exec(code, run_globals)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:20] [!]     sys.exit(_main())
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:20] [!]     return command.main(cmd_args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:20] [!]     return self._main(args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:20] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:20] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:20] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:20] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:20] [!]     self.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:20] [!]     self.callHandlers(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:20] [!]     hdlr.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:20] [!]     self.emit(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:20] [!]     self.handleError(record)
+[2024-02-05 05:20] [!] Message: '[present-rich] %s'
+[2024-02-05 05:20] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:20] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', '# flash-attn; platform_system == "Linux"']
+[!] ERROR: Invalid requirement: '# flash-attn'
+[2024-02-05 05:20] [!] --- Logging error ---
+[2024-02-05 05:20] [!] Traceback (most recent call last):
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:20] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:20] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:20] [!]     for render_output in iter_render:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:20] [!]     for line in lines:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:20] [!]     for segment in segments:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:20] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:20] [!]     renderable = cast_method()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:20] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:20] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:20] [!]     s2 = os.stat(f2)
+[2024-02-05 05:20] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:20] [!] Call stack:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:20] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:20] [!]     exec(code, run_globals)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:20] [!]     sys.exit(_main())
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:20] [!]     return command.main(cmd_args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:20] [!]     return self._main(args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:20] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:20] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:20] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:20] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:20] [!]     self.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:20] [!]     self.callHandlers(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:20] [!]     hdlr.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:20] [!]     self.emit(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:20] [!]     self.handleError(record)
+[2024-02-05 05:20] [!] Message: '[present-rich] %s'
+[2024-02-05 05:20] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:20] [2024-02-05 05:20] install script failed: https://github.com/Zuellni/ComfyUI-ExLlama
+[2024-02-05 05:20] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', '# https://github.com/jllllll/flash-attention/releases/download/v2.4.2/flash_attn-2.4.2+cu121torch2.1cxx11abiFALSE-cp311-cp311-win_amd64.whl; platform_system == "Windows"']
+[!] WARNING: Requirement '# https://github.com/jllllll/flash-attention/releases/download/v2.4.2/flash_attn-2.4.2+cu121torch2.1cxx11abiFALSE-cp311-cp311-win_amd64.whl' looks like a filename, but the file does not exist
+[2024-02-05 05:20] [2024-02-05 05:20]  Ignoring flash-attn: markers 'platform_system == "Windows"' don't match your environment
+[2024-02-05 05:20] [!] --- Logging error ---
+[2024-02-05 05:20] [!] Traceback (most recent call last):
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:20] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:20] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:20] [!]     for render_output in iter_render:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:20] [!]     for line in lines:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:20] [!]     for segment in segments:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:20] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:20] [!]     renderable = cast_method()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:20] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:20] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:20] [!]     s2 = os.stat(f2)
+[2024-02-05 05:20] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:20] [!] Call stack:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:20] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:20] [!]     exec(code, run_globals)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:20] [!]     sys.exit(_main())
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:20] [!]     return command.main(cmd_args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:20] [!]     return self._main(args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:20] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:20] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:20] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:20] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:20] [!]     self.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:20] [!]     self.callHandlers(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:20] [!]     hdlr.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:20] [!]     self.emit(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:20] [!]     self.handleError(record)
+[2024-02-05 05:20] [!] Message: '[present-rich] %s'
+[2024-02-05 05:20] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:20] Attempt to fixing '['https://github.com/Zuellni/ComfyUI-ExLlama']' is done.
+[2024-02-05 05:20] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', '-U', 'sentencepiece']
+[2024-02-05 05:20]  Requirement already satisfied: sentencepiece in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (0.1.99)
+[2024-02-05 05:20] [!] --- Logging error ---
+[2024-02-05 05:20] [!] Traceback (most recent call last):
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:20] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:20] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:20] [!]     for render_output in iter_render:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:20] [!]     for line in lines:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:20] [!]     for segment in segments:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:20] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:20] [!]     renderable = cast_method()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:20] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:20] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:20] [!]     s2 = os.stat(f2)
+[2024-02-05 05:20] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:20] [!] Call stack:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:20] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:20] [!]     exec(code, run_globals)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:20] [!]     sys.exit(_main())
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:20] [!]     return command.main(cmd_args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:20] [!]     return self._main(args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:20] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:20] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:20] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:20] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:20] [!]     self.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:20] [!]     self.callHandlers(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:20] [!]     hdlr.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:20] [!]     self.emit(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:20] [!]     self.handleError(record)
+[2024-02-05 05:20] [!] Message: '[present-rich] %s'
+[2024-02-05 05:20] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:20] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', '-U', 'https://github.com/jllllll/exllama/releases/download/0.0.17/exllama-0.0.17+cu118-cp310-cp310-win_amd64.whl']
+[!] ERROR: exllama-0.0.17+cu118-cp310-cp310-win_amd64.whl is not a supported wheel on this platform.
+[2024-02-05 05:20] [!] --- Logging error ---
+[2024-02-05 05:20] [!] Traceback (most recent call last):
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:20] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:20] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:20] [!]     for render_output in iter_render:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:20] [!]     for line in lines:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:20] [!]     for segment in segments:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:20] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:20] [!]     renderable = cast_method()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:20] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:20] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:20] [!]     s2 = os.stat(f2)
+[2024-02-05 05:20] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:20] [!] Call stack:
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:20] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:20] [!]     exec(code, run_globals)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:20] [!]     sys.exit(_main())
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:20] [!]     return command.main(cmd_args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:20] [!]     return self._main(args)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:20] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:20] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:20] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:20] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:20] [!]     self.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:20] [!]     self.callHandlers(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:20] [!]     hdlr.handle(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:20] [!]     self.emit(record)
+[2024-02-05 05:20] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:20] [!]     self.handleError(record)
+[2024-02-05 05:20] [!] Message: '[present-rich] %s'
+[2024-02-05 05:20] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:20] [2024-02-05 05:20] install script failed: https://github.com/Zuellni/ComfyUI-ExLlama
+[2024-02-05 05:20] After restarting ComfyUI, please refresh the browser.
+[2024-02-05 05:20] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:20] Start update check...[2KUpdate check done.
+[2024-02-05 05:20] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:21] Install custom node 'FizzNodes'
+[2024-02-05 05:21] Try fixing: ['https://github.com/FizzleDorf/ComfyUI_FizzNodes']
+[2024-02-05 05:21] Install: pip packages
+[2024-02-05 05:21] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', 'pandas']
+[2024-02-05 05:21]  Requirement already satisfied: pandas in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (2.2.0)
+[2024-02-05 05:21]  Requirement already satisfied: tzdata>=2022.7 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from pandas) (2023.4)
+[2024-02-05 05:21]  Requirement already satisfied: python-dateutil>=2.8.2 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from pandas) (2.8.2)
+[2024-02-05 05:21]  Requirement already satisfied: pytz>=2020.1 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from pandas) (2024.1)
+[2024-02-05 05:21]  Requirement already satisfied: numpy<2,>=1.22.4 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from pandas) (1.23.5)
+[2024-02-05 05:21]  Requirement already satisfied: six>=1.5 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)
+[2024-02-05 05:21] [!] --- Logging error ---
+[2024-02-05 05:21] [!] Traceback (most recent call last):
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:21] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:21] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:21] [!]     for render_output in iter_render:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:21] [!]     for line in lines:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:21] [!]     for segment in segments:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:21] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:21] [!]     renderable = cast_method()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:21] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:21] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:21] [!]     s2 = os.stat(f2)
+[2024-02-05 05:21] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:21] [!] Call stack:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:21] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:21] [!]     exec(code, run_globals)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:21] [!]     sys.exit(_main())
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:21] [!]     return command.main(cmd_args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:21] [!]     return self._main(args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:21] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:21] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:21] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:21] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:21] [!]     self.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:21] [!]     self.callHandlers(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:21] [!]     hdlr.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:21] [!]     self.emit(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:21] [!]     self.handleError(record)
+[2024-02-05 05:21] [!] Message: '[present-rich] %s'
+[2024-02-05 05:21] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:21] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', 'numexpr']
+[2024-02-05 05:21]  Collecting numexpr
+[2024-02-05 05:21]    Downloading numexpr-2.9.0-cp310-cp310-macosx_11_0_arm64.whl (91 kB)
+[2024-02-05 05:21]       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.8/91.8 kB 298.9 kB/s eta 0:00:00
+[2024-02-05 05:21]  Requirement already satisfied: numpy>=1.13.3 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from numexpr) (1.23.5)
+[2024-02-05 05:21]  Installing collected packages: numexpr
+[2024-02-05 05:21]  Successfully installed numexpr-2.9.0
+[2024-02-05 05:21] [!] --- Logging error ---
+[2024-02-05 05:21] [!] Traceback (most recent call last):
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:21] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:21] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:21] [!]     for render_output in iter_render:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:21] [!]     for line in lines:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:21] [!]     for segment in segments:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:21] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:21] [!]     renderable = cast_method()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:21] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:21] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:21] [!]     s2 = os.stat(f2)
+[2024-02-05 05:21] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:21] [!] Call stack:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:21] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:21] [!]     exec(code, run_globals)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:21] [!]     sys.exit(_main())
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:21] [!]     return command.main(cmd_args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:21] [!]     return self._main(args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:21] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:21] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:21] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:21] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:21] [!]     self.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:21] [!]     self.callHandlers(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:21] [!]     hdlr.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:21] [!]     self.emit(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:21] [!]     self.handleError(record)
+[2024-02-05 05:21] [!] Message: '[present-rich] %s'
+[2024-02-05 05:21] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:21] Attempt to fixing '['https://github.com/FizzleDorf/ComfyUI_FizzNodes']' is done.
+[2024-02-05 05:21] After restarting ComfyUI, please refresh the browser.
+[2024-02-05 05:21] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:21] Start update check...[2KUpdate check done.
+[2024-02-05 05:21] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:21] Install custom node 'ComfyUI-NegiTools'
+[2024-02-05 05:21] Try fixing: ['https://github.com/natto-maki/ComfyUI-NegiTools']
+[2024-02-05 05:21] Install: pip packages
+[2024-02-05 05:21] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', 'openai >= 1.3.0']
+[2024-02-05 05:21]  Collecting openai>=1.3.0
+[2024-02-05 05:21]    Downloading openai-1.11.1-py3-none-any.whl (226 kB)
+[2024-02-05 05:21]       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.1/226.1 kB 461.0 kB/s eta 0:00:00
+[2024-02-05 05:21]  Collecting distro<2,>=1.7.0
+[2024-02-05 05:21]    Using cached distro-1.9.0-py3-none-any.whl (20 kB)
+[2024-02-05 05:21]  Requirement already satisfied: httpx<1,>=0.23.0 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from openai>=1.3.0) (0.24.1)
+[2024-02-05 05:21]  Requirement already satisfied: pydantic<3,>=1.9.0 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from openai>=1.3.0) (1.10.14)
+[2024-02-05 05:21]  Requirement already satisfied: tqdm>4 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from openai>=1.3.0) (4.66.1)
+[2024-02-05 05:21]  Requirement already satisfied: typing-extensions<5,>=4.7 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from openai>=1.3.0) (4.9.0)
+[2024-02-05 05:21]  Requirement already satisfied: sniffio in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from openai>=1.3.0) (1.3.0)
+[2024-02-05 05:21]  Requirement already satisfied: anyio<5,>=3.5.0 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from openai>=1.3.0) (3.7.1)
+[2024-02-05 05:21]  Requirement already satisfied: exceptiongroup in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from anyio<5,>=3.5.0->openai>=1.3.0) (1.2.0)
+[2024-02-05 05:21]  Requirement already satisfied: idna>=2.8 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from anyio<5,>=3.5.0->openai>=1.3.0) (3.6)
+[2024-02-05 05:21]  Requirement already satisfied: httpcore<0.18.0,>=0.15.0 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from httpx<1,>=0.23.0->openai>=1.3.0) (0.15.0)
+[2024-02-05 05:21]  Requirement already satisfied: certifi in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from httpx<1,>=0.23.0->openai>=1.3.0) (2024.2.2)
+[2024-02-05 05:21]  Requirement already satisfied: h11<0.13,>=0.11 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from httpcore<0.18.0,>=0.15.0->httpx<1,>=0.23.0->openai>=1.3.0) (0.12.0)
+[2024-02-05 05:21]  Installing collected packages: distro, openai
+[2024-02-05 05:21]  Successfully installed distro-1.9.0 openai-1.11.1
+[2024-02-05 05:21] [!] --- Logging error ---
+[2024-02-05 05:21] [!] Traceback (most recent call last):
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:21] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:21] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:21] [!]     for render_output in iter_render:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:21] [!]     for line in lines:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:21] [!]     for segment in segments:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:21] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:21] [!]     renderable = cast_method()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:21] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:21] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:21] [!]     s2 = os.stat(f2)
+[2024-02-05 05:21] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:21] [!] Call stack:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:21] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:21] [!]     exec(code, run_globals)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:21] [!]     sys.exit(_main())
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:21] [!]     return command.main(cmd_args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:21] [!]     return self._main(args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:21] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:21] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:21] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:21] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:21] [!]     self.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:21] [!]     self.callHandlers(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:21] [!]     hdlr.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:21] [!]     self.emit(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:21] [!]     self.handleError(record)
+[2024-02-05 05:21] [!] Message: '[present-rich] %s'
+[2024-02-05 05:21] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:21] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', '# controlnet-aux >= 0.0.7']
+[!] ERROR: Invalid requirement: '# controlnet-aux >= 0.0.7'
+[2024-02-05 05:21] [!] --- Logging error ---
+[2024-02-05 05:21] [!] Traceback (most recent call last):
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:21] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:21] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:21] [!]     for render_output in iter_render:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:21] [!]     for line in lines:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:21] [!]     for segment in segments:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:21] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:21] [!]     renderable = cast_method()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:21] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:21] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:21] [!]     s2 = os.stat(f2)
+[2024-02-05 05:21] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:21] [!] Call stack:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:21] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:21] [!]     exec(code, run_globals)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:21] [!]     sys.exit(_main())
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:21] [!]     return command.main(cmd_args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:21] [!]     return self._main(args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:21] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:21] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:21] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:21] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:21] [!]     self.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:21] [!]     self.callHandlers(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:21] [!]     hdlr.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:21] [!]     self.emit(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:21] [!]     self.handleError(record)
+[2024-02-05 05:21] [!] Message: '[present-rich] %s'
+[2024-02-05 05:21] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:21] [2024-02-05 05:21] install script failed: https://github.com/natto-maki/ComfyUI-NegiTools
+[2024-02-05 05:21] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', 'numba >= 0.58.1']
+[2024-02-05 05:21]  Requirement already satisfied: numba>=0.58.1 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (0.59.0)
+[2024-02-05 05:21]  Requirement already satisfied: numpy<1.27,>=1.22 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from numba>=0.58.1) (1.23.5)
+[2024-02-05 05:21]  Requirement already satisfied: llvmlite<0.43,>=0.42.0dev0 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from numba>=0.58.1) (0.42.0)
+[2024-02-05 05:21] [!] --- Logging error ---
+[2024-02-05 05:21] [!] Traceback (most recent call last):
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:21] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:21] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:21] [!]     for render_output in iter_render:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:21] [!]     for line in lines:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:21] [!]     for segment in segments:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:21] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:21] [!]     renderable = cast_method()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:21] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:21] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:21] [!]     s2 = os.stat(f2)
+[2024-02-05 05:21] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:21] [!] Call stack:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:21] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:21] [!]     exec(code, run_globals)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:21] [!]     sys.exit(_main())
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:21] [!]     return command.main(cmd_args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:21] [!]     return self._main(args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:21] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:21] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:21] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:21] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:21] [!]     self.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:21] [!]     self.callHandlers(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:21] [!]     hdlr.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:21] [!]     self.emit(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:21] [!]     self.handleError(record)
+[2024-02-05 05:21] [!] Message: '[present-rich] %s'
+[2024-02-05 05:21] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:21] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', 'opencv-python >= 4.8.1.78']
+[2024-02-05 05:21]  Requirement already satisfied: opencv-python>=4.8.1.78 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (4.9.0.80)
+[2024-02-05 05:21]  Requirement already satisfied: numpy>=1.17.3 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from opencv-python>=4.8.1.78) (1.23.5)
+[2024-02-05 05:21] [!] --- Logging error ---
+[2024-02-05 05:21] [!] Traceback (most recent call last):
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:21] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:21] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:21] [!]     for render_output in iter_render:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:21] [!]     for line in lines:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:21] [!]     for segment in segments:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:21] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:21] [!]     renderable = cast_method()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:21] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:21] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:21] [!]     s2 = os.stat(f2)
+[2024-02-05 05:21] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:21] [!] Call stack:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:21] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:21] [!]     exec(code, run_globals)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:21] [!]     sys.exit(_main())
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:21] [!]     return command.main(cmd_args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:21] [!]     return self._main(args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:21] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:21] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:21] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:21] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:21] [!]     self.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:21] [!]     self.callHandlers(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:21] [!]     hdlr.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:21] [!]     self.emit(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:21] [!]     self.handleError(record)
+[2024-02-05 05:21] [!] Message: '[present-rich] %s'
+[2024-02-05 05:21] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:21] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', '# required from controlnet_aux']
+[!] ERROR: Invalid requirement: '# required from controlnet_aux'
+[2024-02-05 05:21] [!] --- Logging error ---
+[2024-02-05 05:21] [!] Traceback (most recent call last):
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:21] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:21] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:21] [!]     for render_output in iter_render:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:21] [!]     for line in lines:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:21] [!]     for segment in segments:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:21] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:21] [!]     renderable = cast_method()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:21] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:21] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:21] [!]     s2 = os.stat(f2)
+[2024-02-05 05:21] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:21] [!] Call stack:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:21] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:21] [!]     exec(code, run_globals)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:21] [!]     sys.exit(_main())
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:21] [!]     return command.main(cmd_args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:21] [!]     return self._main(args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:21] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:21] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:21] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:21] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:21] [!]     self.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:21] [!]     self.callHandlers(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:21] [!]     hdlr.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:21] [!]     self.emit(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:21] [!]     self.handleError(record)
+[2024-02-05 05:21] [!] Message: '[present-rich] %s'
+[2024-02-05 05:21] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:21] [2024-02-05 05:21] install script failed: https://github.com/natto-maki/ComfyUI-NegiTools
+[2024-02-05 05:21] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', 'huggingface-hub >= 0.19.3']
+[2024-02-05 05:21]  Requirement already satisfied: huggingface-hub>=0.19.3 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (0.20.3)
+[2024-02-05 05:21]  Requirement already satisfied: filelock in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from huggingface-hub>=0.19.3) (3.13.1)
+[2024-02-05 05:21]  Requirement already satisfied: requests in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from huggingface-hub>=0.19.3) (2.31.0)
+[2024-02-05 05:21]  Requirement already satisfied: typing-extensions>=3.7.4.3 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from huggingface-hub>=0.19.3) (4.9.0)
+[2024-02-05 05:21]  Requirement already satisfied: tqdm>=4.42.1 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from huggingface-hub>=0.19.3) (4.66.1)
+[2024-02-05 05:21]  Requirement already satisfied: fsspec>=2023.5.0 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from huggingface-hub>=0.19.3) (2023.12.2)
+[2024-02-05 05:21]  Requirement already satisfied: pyyaml>=5.1 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from huggingface-hub>=0.19.3) (6.0.1)
+[2024-02-05 05:21]  Requirement already satisfied: packaging>=20.9 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from huggingface-hub>=0.19.3) (23.2)
+[2024-02-05 05:21]  Requirement already satisfied: charset-normalizer<4,>=2 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from requests->huggingface-hub>=0.19.3) (3.3.2)
+[2024-02-05 05:21]  Requirement already satisfied: idna<4,>=2.5 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from requests->huggingface-hub>=0.19.3) (3.6)
+[2024-02-05 05:21]  Requirement already satisfied: urllib3<3,>=1.21.1 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from requests->huggingface-hub>=0.19.3) (2.2.0)
+[2024-02-05 05:21]  Requirement already satisfied: certifi>=2017.4.17 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from requests->huggingface-hub>=0.19.3) (2024.2.2)
+[2024-02-05 05:21] [!] --- Logging error ---
+[2024-02-05 05:21] [!] Traceback (most recent call last):
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:21] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:21] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:21] [!]     for render_output in iter_render:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:21] [!]     for line in lines:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:21] [!]     for segment in segments:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:21] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:21] [!]     renderable = cast_method()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:21] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:21] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:21] [!]     s2 = os.stat(f2)
+[2024-02-05 05:21] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:21] [!] Call stack:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:21] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:21] [!]     exec(code, run_globals)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:21] [!]     sys.exit(_main())
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:21] [!]     return command.main(cmd_args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:21] [!]     return self._main(args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:21] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:21] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:21] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:21] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:21] [!]     self.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:21] [!]     self.callHandlers(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:21] [!]     hdlr.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:21] [!]     self.emit(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:21] [!]     self.handleError(record)
+[2024-02-05 05:21] [!] Message: '[present-rich] %s'
+[2024-02-05 05:21] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:21] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', 'scipy >= 1.11.3']
+[2024-02-05 05:21]  Requirement already satisfied: scipy>=1.11.3 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (1.12.0)
+[2024-02-05 05:21]  Requirement already satisfied: numpy<1.29.0,>=1.22.4 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from scipy>=1.11.3) (1.23.5)
+[2024-02-05 05:21] [!] --- Logging error ---
+[2024-02-05 05:21] [!] Traceback (most recent call last):
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:21] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:21] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:21] [!]     for render_output in iter_render:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:21] [!]     for line in lines:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:21] [!]     for segment in segments:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:21] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:21] [!]     renderable = cast_method()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:21] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:21] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:21] [!]     s2 = os.stat(f2)
+[2024-02-05 05:21] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:21] [!] Call stack:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:21] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:21] [!]     exec(code, run_globals)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:21] [!]     sys.exit(_main())
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:21] [!]     return command.main(cmd_args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:21] [!]     return self._main(args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:21] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:21] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:21] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:21] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:21] [!]     self.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:21] [!]     self.callHandlers(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:21] [!]     hdlr.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:21] [!]     self.emit(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:21] [!]     self.handleError(record)
+[2024-02-05 05:21] [!] Message: '[present-rich] %s'
+[2024-02-05 05:21] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:21] 
+## ComfyUI-Manager: EXECUTE => ['/Library/Frameworks/Python.framework/Versions/3.10/bin/python3', '-m', 'pip', 'install', 'scikit-image >= 0.20.0']
+[2024-02-05 05:21]  Requirement already satisfied: scikit-image>=0.20.0 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (0.21.0)
+[2024-02-05 05:21]  Requirement already satisfied: imageio>=2.27 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from scikit-image>=0.20.0) (2.33.1)
+[2024-02-05 05:21]  Requirement already satisfied: tifffile>=2022.8.12 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from scikit-image>=0.20.0) (2024.1.30)
+[2024-02-05 05:21]  Requirement already satisfied: scipy>=1.8 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from scikit-image>=0.20.0) (1.12.0)
+[2024-02-05 05:21]  Requirement already satisfied: PyWavelets>=1.1.1 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from scikit-image>=0.20.0) (1.5.0)
+[2024-02-05 05:21]  Requirement already satisfied: numpy>=1.21.1 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from scikit-image>=0.20.0) (1.23.5)
+[2024-02-05 05:21]  Requirement already satisfied: networkx>=2.8 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from scikit-image>=0.20.0) (3.2.1)
+[2024-02-05 05:21]  Requirement already satisfied: lazy_loader>=0.2 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from scikit-image>=0.20.0) (0.3)
+[2024-02-05 05:21]  Requirement already satisfied: packaging>=21 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from scikit-image>=0.20.0) (23.2)
+[2024-02-05 05:21]  Requirement already satisfied: pillow>=9.0.1 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from scikit-image>=0.20.0) (9.5.0)
+[2024-02-05 05:21] [!] --- Logging error ---
+[2024-02-05 05:21] [!] Traceback (most recent call last):
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 177, in emit
+[2024-02-05 05:21] [!]     self.console.print(renderable, overflow="ignore", crop=False, style=style)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1673, in print
+[2024-02-05 05:21] [!]     extend(render(renderable, render_options))
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1305, in render
+[2024-02-05 05:21] [!]     for render_output in iter_render:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 134, in __rich_console__
+[2024-02-05 05:21] [!]     for line in lines:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/segment.py", line 249, in split_lines
+[2024-02-05 05:21] [!]     for segment in segments:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/console.py", line 1283, in render
+[2024-02-05 05:21] [!]     renderable = rich_cast(renderable)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_vendor/rich/protocol.py", line 36, in rich_cast
+[2024-02-05 05:21] [!]     renderable = cast_method()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 130, in __rich__
+[2024-02-05 05:21] [!]     pip_cmd = get_best_invocation_for_this_pip()
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/entrypoints.py", line 58, in get_best_invocation_for_this_pip
+[2024-02-05 05:21] [!]     if found_executable and os.path.samefile(
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/genericpath.py", line 101, in samefile
+[2024-02-05 05:21] [!]     s2 = os.stat(f2)
+[2024-02-05 05:21] [!] FileNotFoundError: [Errno 2] No such file or directory: '/Library/Frameworks/Python.framework/Versions/3.10/bin/pip'
+[2024-02-05 05:21] [!] Call stack:
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2024-02-05 05:21] [!]     return _run_code(code, main_globals, None,
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/runpy.py", line 86, in _run_code
+[2024-02-05 05:21] [!]     exec(code, run_globals)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/__main__.py", line 31, in <module>
+[2024-02-05 05:21] [!]     sys.exit(_main())
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/main.py", line 70, in main
+[2024-02-05 05:21] [!]     return command.main(cmd_args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 101, in main
+[2024-02-05 05:21] [!]     return self._main(args)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/base_command.py", line 223, in _main
+[2024-02-05 05:21] [!]     self.handle_pip_version_check(options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/cli/req_command.py", line 190, in handle_pip_version_check
+[2024-02-05 05:21] [!]     pip_self_version_check(session, options)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/self_outdated_check.py", line 236, in pip_self_version_check
+[2024-02-05 05:21] [!]     logger.warning("[present-rich] %s", upgrade_prompt)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1480, in warning
+[2024-02-05 05:21] [!]     self._log(WARNING, msg, args, **kwargs)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1615, in _log
+[2024-02-05 05:21] [!]     self.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1625, in handle
+[2024-02-05 05:21] [!]     self.callHandlers(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 1687, in callHandlers
+[2024-02-05 05:21] [!]     hdlr.handle(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py", line 967, in handle
+[2024-02-05 05:21] [!]     self.emit(record)
+[2024-02-05 05:21] [!]   File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pip/_internal/utils/logging.py", line 179, in emit
+[2024-02-05 05:21] [!]     self.handleError(record)
+[2024-02-05 05:21] [!] Message: '[present-rich] %s'
+[2024-02-05 05:21] [!] Arguments: (UpgradePrompt(old='22.2.1', new='24.0'),)
+[2024-02-05 05:21] Attempt to fixing '['https://github.com/natto-maki/ComfyUI-NegiTools']' is done.
+[2024-02-05 05:21] After restarting ComfyUI, please refresh the browser.
+[2024-02-05 05:21] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:21] Start update check...[2KUpdate check done.
+[2024-02-05 05:21] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:21] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:21] Start update check...[2KUpdate check done.
+[2024-02-05 05:21] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:21] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:21] Start update check...[2KUpdate check done.
+[2024-02-05 05:21] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:21] Update custom node 'tinyterraNodes'
+[2024-02-05 05:21] Update: ['https://github.com/TinyTerra/ComfyUI_tinyterraNodes']
+[2024-02-05 05:21] path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_tinyterraNodes / repo.is_dirty: True
+[2024-02-05 05:21] 
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Library/Frameworks/Python.framework/Versions/3.10/bin/python3']
+[2024-02-05 05:21] [ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Library/Frameworks/Python.framework/Versions/3.10/bin/python3']`
+[2024-02-05 05:21] Update was successful.
+[2024-02-05 05:21] After restarting ComfyUI, please refresh the browser.
+[2024-02-05 05:21] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:21] Start update check...[2KUpdate check done.
+[2024-02-05 05:21] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:22] Update custom node 'ComfyUI-VideoHelperSuite'
+[2024-02-05 05:22] Update: ['https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite']
+[2024-02-05 05:22] path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite / repo.is_dirty: False
 Update(git-clone) error: https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite / Cmd('git') failed due to: exit code(1)
   cmdline: git pull -v -- origin
   stderr: 'error: The following untracked working tree files would be overwritten by merge:'
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
-Update custom node 'ComfyUI-Advanced-ControlNet'
-Update: ['https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet']
-path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Advanced-ControlNet / repo.is_dirty: True
-Update(git-clone) error: https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet / Cmd('git') failed due to: exit code(1)
+[2024-02-05 05:22] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:22] Start update check...[2KUpdate check done.
+[2024-02-05 05:22] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:22] Update custom node 'ComfyUI-VideoHelperSuite'
+[2024-02-05 05:22] Update: ['https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite']
+[2024-02-05 05:22] path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite / repo.is_dirty: False
+[2024-02-05 05:22] Update(git-clone) error: https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite / Cmd('git') failed due to: exit code(1)
   cmdline: git pull -v -- origin
-  stderr: 'error: RPC failed; curl 28 Failed to connect to github.com port 443 after 75000 ms: Couldn't connect to server
-fatal: expected flush after ref listing'
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
-Start update check...[2KUpdate check done.
-FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+  stderr: 'error: The following untracked working tree files would be overwritten by merge:'
+[2024-02-05 05:22] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:22] Start update check...[2KUpdate check done.
+[2024-02-05 05:22] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:22] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:22] Start update check...[2KUpdate check done.
+[2024-02-05 05:22] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:22] Update custom node 'ComfyUI-VideoHelperSuite'
+[2024-02-05 05:22] Update: ['https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite']
+[2024-02-05 05:22] path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite / repo.is_dirty: False
+[2024-02-05 05:22] Update(git-clone) error: https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite / Cmd('git') failed due to: exit code(1)
+  cmdline: git pull -v -- origin
+  stderr: 'error: The following untracked working tree files would be overwritten by merge:'
+[2024-02-05 05:22] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:22] Start update check...[2KUpdate check done.
+[2024-02-05 05:22] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:22] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:22] Start update check...[2KUpdate check done.
+[2024-02-05 05:22] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 05:22] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/4245046894_model-list.json
+[2024-02-05 05:23] Install model 'SDXL-Turbo 1.0 (fp16)' into '/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/models/checkpoints/SDXL-TURBO/sd_xl_turbo_1.0_fp16.safetensors'
+[2024-02-05 05:23] [ERROR] <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+[2024-02-05 05:23] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/4245046894_model-list.json
+[2024-02-05 05:24] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/2259715867_alter-list.json
+[2024-02-05 05:24] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 05:24] [2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_experiments[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Impact-Pack[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/masquerade-nodes-comfyui[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Cutoff[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_smZNodes[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Noise[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_SeeCoder[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_node_Lilly[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_Dave_CustomNode[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/images-grid-comfy-plugin[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-WD14-Tagger[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ambw_comfyui[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/nui-suite[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfy_mtb[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_roop[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-prompt-control[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-dynamicprompts[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/abg-comfyui[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-reactor-node[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/attention-couple-ComfyUI[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_FizzNodes[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-optical-flow[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI_fabric[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-ExLlama[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-seamless-tiling[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/cd-tuner_negpip-ComfyUI[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sd-dynamic-thresholding[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/Comfyui_Lama[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-LaMA-Preprocessor[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/comfyui-diffusion-cg[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-CADS[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/sd-webui-color-enhance[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-TiledDiffusion[2KFetching: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/image_controlgot prompt
+[2024-02-05 05:56] got prompt
+[2024-02-05 05:57] got prompt
+[2024-02-05 05:58] got prompt
+[2024-02-05 06:00] got prompt
+[2024-02-05 06:00] got prompt
+[2024-02-05 06:00] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/extension-node-map.json
+[2024-02-05 06:01] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 06:01] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 06:03] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/extension-node-map.json
+[2024-02-05 06:03] got prompt
+[2024-02-05 06:05] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 06:05] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-02-05 06:05] Update custom node 'AIGODLIKE-COMFYUI-TRANSLATION'
+[2024-02-05 06:05] Update: ['https://github.com/AIGODLIKE/AIGODLIKE-COMFYUI-TRANSLATION']
+[2024-02-05 06:05] path=/Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/AIGODLIKE-COMFYUI-TRANSLATION / repo.is_dirty: False
+[2024-02-05 06:05] 
+## ComfyUI-Manager: EXECUTE => ['#LAZY-INSTALL-SCRIPT', '/Library/Frameworks/Python.framework/Versions/3.10/bin/python3']
+[2024-02-05 06:05] [ComfyUI-Manager] Unexpected behavior: `['#LAZY-INSTALL-SCRIPT', '/Library/Frameworks/Python.framework/Versions/3.10/bin/python3']`
+[2024-02-05 06:05] Update was successful.
+[2024-02-05 06:05] After restarting ComfyUI, please refresh the browser.
+[2024-02-05 06:05] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-02-05 06:05] FETCH DATA from: /Users/aoneko/Documents/Stable Diffusion/Blender_ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json

@@ -3,5 +3,7 @@
     "pysssss.SnapToGrid": true,
     "Comfy.ColorPalette": "solarized",
     "pysssss.WidgetDefaults": "[]",
-    "AE.details": true
+    "AE.details": true,
+    "AE.mouseover": true,
+    "Comfy.DevMode": true
 }
