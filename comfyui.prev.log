@@ -1,0 +1,16 @@
+** ComfyUI startup time: 2024-02-24 12:16:56.225796
+** Platform: Darwin
+** Python version: 3.11.5 (main, Sep 11 2023, 08:31:25) [Clang 14.0.6 ]
+** Python executable: /Users/aoneko/enter/bin/python
+** Log path: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/comfyui.log
+
+Prestartup times for custom nodes:
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/rgthree-comfy
+   0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager
+
+Traceback (most recent call last):
+  File "/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/main.py", line 73, in <module>
+    import comfy.utils
+  File "/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/comfy/utils.py", line 5, in <module>
+    import safetensors.torch
+ModuleNotFoundError: No module named 'safetensors'
