@@ -1,4 +1,4 @@
-** ComfyUI startup time: 2024-02-26 15:57:36.007172
+** ComfyUI startup time: 2024-02-26 16:47:22.820291
 ** Platform: Darwin
 ** Python version: 3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]
 ** Python executable: /Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python
@@ -14,63 +14,17 @@ Device: mps
 VAE dtype: torch.float32
 Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
 ### Loading: ComfyUI-Manager (V1.19.2)
-### ComfyUI Revision: 2014 on 'develop' [80534c42] | Released on '2024-02-24'
+### ComfyUI Revision: 2016 on 'develop' [8766c1d2] | Released on '2024-02-26'
 FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
-[ComfyUI_zfkun] [1;35mcheck start[0m
 FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
 FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
 FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
-Exception in thread Thread-1 (<lambda>):
-Traceback (most recent call last):
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 992, in _wrap_create_connection
-    return await self._loop.create_connection(*args, **kwargs)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1055, in create_connection
-    raise exceptions[0]
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1040, in create_connection
-    sock = await self._connect_sock(
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 954, in _connect_sock
-    await self.sock_connect(sock, address)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/selector_events.py", line 502, in sock_connect
-    return await fut
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/selector_events.py", line 537, in _sock_connect_cb
-    raise OSError(err, f'Connect call failed {address}')
-ConnectionRefusedError: [Errno 61] Connect call failed ('0.0.0.0', 443)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 1009, in _bootstrap_inner
-    self.run()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 946, in run
-    self._target(*self._args, **self._kwargs)
-  File "/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 2076, in <lambda>
-    threading.Thread(target=lambda: asyncio.run(default_cache_update())).start()
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
-    return loop.run_until_complete(main)
-  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 641, in run_until_complete
-    return future.result()
-  File "/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 2074, in default_cache_update
-    await asyncio.gather(a, b, c, d)
-  File "/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 2062, in get_cache
-    json_obj = await get_data(uri)
-  File "/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager/__init__.py", line 500, in get_data
-    async with session.get(uri) as resp:
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/client.py", line 1194, in __aenter__
-    self._resp = await self._coro
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/client.py", line 578, in _request
-    conn = await self._connector.connect(
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 544, in connect
-    proto = await self._create_connection(req, traces, timeout)
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 911, in _create_connection
-    _, proto = await self._create_direct_connection(req, traces, timeout)
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1235, in _create_direct_connection
-    raise last_exc
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1204, in _create_direct_connection
-    transp, proto = await self._wrap_create_connection(
-  File "/Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1000, in _wrap_create_connection
-    raise client_error(req.connection_key, exc) from exc
-aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host raw.githubusercontent.com:443 ssl:default [Connect call failed ('0.0.0.0', 443)]
+[ComfyUI_zfkun] [1;35mcheck start[0m
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
 [ComfyUI_zfkun] [93m"Pillow" is not installed. Trying to install.[0m
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
 [ComfyUI_zfkun] [92m"Pillow" is installed[0m
 [ComfyUI_zfkun] [92mall dependency installed[0m
 [ComfyUI_zfkun] [1;35mcheck end[0m
@@ -85,7 +39,7 @@ aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host raw.githu
 [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
 [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m199[0m [32mnodes successfully.[0m
 
-	[3m[93m"Every strike brings me closer to the next home run."[0m[3m - Babe Ruth[0m
+	[3m[93m"Life is 10% what happens to us and 90% how we react to it."[0m[3m - Charles R. Swindoll[0m
 
 
 [32m[1m[rgthree] Loaded 21 exciting nodes.[0m
@@ -116,7 +70,7 @@ Cannot import /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_no
 [VideoHelperSuite] - [0;33mWARNING[0m - Failed to import imageio_ffmpeg
 [VideoHelperSuite] - [0;31mERROR[0m - No valid ffmpeg found.
 [36mEfficiency Nodes:[0m Attempting to add Control Net options to the 'HiRes-Fix Script' Node (comfyui_controlnet_aux add-on)...[92mSuccess![0m
-[36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[92mSuccess![0m
+[36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[91mFailed![0m
 [93mEfficiency Nodes Warning:[0m Failed to import python package 'simpleeval'; related nodes disabled.
 
 ------------------------------------------
@@ -131,46 +85,47 @@ Cannot import /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_no
 Import times for custom nodes:
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_LatentToRGB
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_FastVAEDecorder_SDXL
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/sd-dynamic-thresholding
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ControlNet-LLLite-ComfyUI
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/sdxl_prompt_styler
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/cg-use-everywhere
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/sd-dynamic-thresholding
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/AIGODLIKE-ComfyUI-Translation
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_TiledKSampler
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_experiments
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-post-processing-nodes
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_fabric
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/cg-image-picker
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/IPAdapter-ComfyUI
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_Cutoff
-   0.0 seconds (IMPORT FAILED): /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfy-qr
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/cg-use-everywhere
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/cup.py
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_Noise
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_Cutoff
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/cg-image-picker
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-post-processing-nodes
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/IPAdapter-ComfyUI
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_experiments
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_Dave_CustomNode
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_fabric
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/Cup-ClipBoard
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfyui-portrait-master
+   0.0 seconds (IMPORT FAILED): /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfy-qr
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyMath
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_Noise
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfyui_dagthomas
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Advanced-ControlNet
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/rgthree-comfy
-   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/efficiency-nodes-comfyui
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfyui-portrait-master
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
    0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved
    0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager
    0.2 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_tinyterraNodes
    0.4 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux
    0.6 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
    0.7 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui
-   1.6 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_zfkun
-   2.8 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/clipseg.py
+   1.7 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_zfkun
+   3.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/clipseg.py
 
 Starting server
 
 To see the GUI go to: http://127.0.0.1:8188
-[AnimateDiffEvo] - [0;33mWARNING[0m - This warning can be ignored, you should not be using the deprecated AnimateDiff Combine node anyway. If you are, use Video Combine from ComfyUI-VideoHelperSuite instead. ffmpeg could not be found. Outputs that require it have been disabled
+Update ComfyUI
+ComfyUI update fail: No item found with id 'origin/develop'
