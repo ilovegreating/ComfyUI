@@ -222,3 +222,15 @@ I wanted to learn how Stable Diffusion worked in detail. I also wanted something
 ### Who is this for?
 
 This is for anyone that wants to make complex workflows with SD or that wants to learn more how SD works. The interface follows closely how SD works and the code should be much more simple to understand than other SD UIs.
+
+
+
+
+
+#########
+### 如何启动
+1 python3 -m venv .venv
+
+2 . .venv/bin/activate
+
+3 pip install -r requirements.txt
