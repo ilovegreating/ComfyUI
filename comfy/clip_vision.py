@@ -1,4 +1,4 @@
-from .utils import load_torch_file, transformers_convert, state_dict_prefix_replace
+from .utils import load_torch_file, transformers_convert, common_upscale, state_dict_prefix_replace
 import os
 import torch
 import json

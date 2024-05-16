@@ -1,0 +1,131 @@
+** ComfyUI startup time: 2024-02-26 16:47:22.820291
+** Platform: Darwin
+** Python version: 3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]
+** Python executable: /Users/aoneko/Documents/Stable Diffusion/stable-diffusion-webui/venv/bin/python
+** Log path: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/comfyui.log
+
+Prestartup times for custom nodes:
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/rgthree-comfy
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager
+
+Total VRAM 24576 MB, total RAM 24576 MB
+Set vram state to: SHARED
+Device: mps
+VAE dtype: torch.float32
+Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
+### Loading: ComfyUI-Manager (V1.19.2)
+### ComfyUI Revision: 2016 on 'develop' [8766c1d2] | Released on '2024-02-26'
+FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[ComfyUI_zfkun] [1;35mcheck start[0m
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[ComfyUI_zfkun] [93m"Pillow" is not installed. Trying to install.[0m
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[ComfyUI_zfkun] [92m"Pillow" is installed[0m
+[ComfyUI_zfkun] [92mall dependency installed[0m
+[ComfyUI_zfkun] [1;35mcheck end[0m
+[ComfyUI_zfkun] [1;35mboot start[0m
+[ComfyUI_zfkun] [92mnode install: preview_text.js[0m
+[ComfyUI_zfkun] [92mnode install: share_screen.js[0m
+[ComfyUI_zfkun] [92mnode install: preview_text_multiline.js[0m
+[ComfyUI_zfkun] [1;35mboot end[0m
+[34mWAS Node Suite: [0mBlenderNeko's Advanced CLIP Text Encode found, attempting to enable `CLIPTextEncode` support.[0m
+[34mWAS Node Suite: [0m`CLIPTextEncode (BlenderNeko Advanced + NSP)` node enabled under `WAS Suite/Conditioning` menu.[0m
+[34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
+[34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m199[0m [32mnodes successfully.[0m
+
+	[3m[93m"Life is 10% what happens to us and 90% how we react to it."[0m[3m - Charles R. Swindoll[0m
+
+
+[32m[1m[rgthree] Loaded 21 exciting nodes.[0m
+[32m[rgthree] Optimizing ComfyUI recursive execution. [33mIf queueing and/or re-queueing seems broken, change "patch_recursive_execution" to false in rgthree_config.json [0m
+
+### Loading: ComfyUI-Impact-Pack (V4.58.1)
+### Loading: ComfyUI-Impact-Pack (Subpack: V0.2.4)
+Config Export Error[Errno 2] No such file or directory: 'C:/Users/DorotaL/AppData/Roaming/Blender Foundation/Blender/4.0/scripts/addons/ComfyUI-BlenderAI-node/SDNode/PATH_CFG.json'[Impact Pack] Wildcards loading done.
+### Loading: ComfyUI-Inspire-Pack ([0, 56])
+[36;20m[comfyui_controlnet_aux] | INFO -> Using ckpts path: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts[0m
+[36;20m[comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+[36;20m[comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux/node_wrappers/dwpose.py:26: UserWarning: DWPose: Onnxruntime not found or doesn't come with acceleration providers, switch to OpenCV with CPU device. DWPose might run very slowly
+  warnings.warn("DWPose: Onnxruntime not found or doesn't come with acceleration providers, switch to OpenCV with CPU device. DWPose might run very slowly")
+Traceback (most recent call last):
+  File "/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/nodes.py", line 1887, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfy-qr/__init__.py", line 1, in <module>
+    from .qr_nodes import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
+  File "/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfy-qr/qr_nodes.py", line 2, in <module>
+    import qrcode
+ModuleNotFoundError: No module named 'qrcode'
+
+Cannot import /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfy-qr module for custom nodes: No module named 'qrcode'
+[34mDavemane42 Custom Nodes: [92mLoaded[0m
+[VideoHelperSuite] - [0;33mWARNING[0m - Failed to import imageio_ffmpeg
+[VideoHelperSuite] - [0;31mERROR[0m - No valid ffmpeg found.
+[36mEfficiency Nodes:[0m Attempting to add Control Net options to the 'HiRes-Fix Script' Node (comfyui_controlnet_aux add-on)...[92mSuccess![0m
+[36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[36mEfficiency Nodes:[0m Attempting to add 'AnimatedDiff Script' Node (ComfyUI-AnimateDiff-Evolved add-on)...[91mFailed![0m
+[93mEfficiency Nodes Warning:[0m Failed to import python package 'simpleeval'; related nodes disabled.
+
+------------------------------------------
+[34mComfyroll Studio v1.59 : [92m 154 Nodes Loaded[0m
+------------------------------------------
+** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
+** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
+------------------------------------------
+[agl/register error]: [Errno 17] File exists: '/Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/web/extensions/AIGODLIKE-COMFYUI-TRANSLATION'
+[92m[tinyterraNodes] [32mLoaded[0m
+
+Import times for custom nodes:
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_LatentToRGB
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_FastVAEDecorder_SDXL
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/sd-dynamic-thresholding
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ControlNet-LLLite-ComfyUI
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/sdxl_prompt_styler
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_ADV_CLIP_emb
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/AIGODLIKE-ComfyUI-Translation
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_TiledKSampler
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/cg-use-everywhere
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/cup.py
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_Cutoff
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/cg-image-picker
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-post-processing-nodes
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/IPAdapter-ComfyUI
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_experiments
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_Dave_CustomNode
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_fabric
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/Cup-ClipBoard
+   0.0 seconds (IMPORT FAILED): /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfy-qr
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyMath
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_Noise
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfyui_dagthomas
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Advanced-ControlNet
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/rgthree-comfy
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/efficiency-nodes-comfyui
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfyui-portrait-master
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+   0.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved
+   0.1 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Manager
+   0.2 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_tinyterraNodes
+   0.4 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/comfyui_controlnet_aux
+   0.6 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
+   0.7 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/was-node-suite-comfyui
+   1.7 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/ComfyUI_zfkun
+   3.0 seconds: /Users/aoneko/Documents/Stable Diffusion/ComfyUI/ComfyUI/custom_nodes/clipseg.py
+
+Starting server
+
+To see the GUI go to: http://127.0.0.1:8188
+Update ComfyUI
+ComfyUI update fail: No item found with id 'origin/develop'
